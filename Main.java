@@ -8,5 +8,8 @@ public class Main {
 
         Maps.mapBasicDemo();
         Maps.mapAdvancedDemo();
+
+        Operators.comparisonDemo();
+        Operators.andOrDemo();
     }
 }

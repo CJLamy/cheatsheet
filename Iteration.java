@@ -23,6 +23,7 @@ public class Iteration {
             System.out.println("==================");
         }
     }
+
     public static void whileLoop() {
         // When thinking about the while loop, you can think of it as a stripped
         // down for loop.  Where the for loop asked us to initialize variables,
@@ -40,5 +41,43 @@ public class Iteration {
             System.out.println("==================");
             i++;
         }
+    }
+
+    public static void breakAndContinue() {
+        // While it's not necessary to know about the break and continue statements,
+        // here's a function that uses both of these statements as well as an explanation
+        // on what it does.  Experiment with the code so that you can see exactly what
+        // the statements do!
+        char[] breakfast = {'b', 'r', 'e', 'a', 'k', 'f', 'a', 's', 't'};
+
+        // In our world, the letter k has been outlawed.  As a result, we have to
+        // go through all words and sound the alarm for anything that has a k.
+        // This character array containing the word breakfast will serve as our practice.
+        for (int i = 0; i < breakfast.length; i++) {
+            if (breakfast[i] == 'k') {
+                System.out.println("Sound the alarm, we're in the danger zone!");
+                break;
+            } else {
+                System.out.println("So far so good...");
+            }
+        }
+        // You should notice that our code runs, but the moment we sound the alarm,
+        // we're no longer printing out "So far so good...".  This is because the
+        // break statement is effectively a panic button, ending the loop no matter
+        // the progress you've made.
+        System.out.println("\n");
+
+        // In this loop, we'll go through and print out the new word without the 'k'
+        // and also print the length of that word using the continue statement.
+        String newWord = "";
+        int counter = 0;
+        for (int i = 0; i < breakfast.length; i++) {
+            if (breakfast[i] == 'k') {
+                continue; // Continue will tell our code to go back to the top (where we i++)
+            }
+            newWord += breakfast[i];
+            counter++;
+        }
+        System.out.println(newWord + " is " + counter + " letters long.");
     }
 }

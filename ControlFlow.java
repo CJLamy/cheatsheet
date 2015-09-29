@@ -45,7 +45,30 @@ public class ControlFlow {
         // on, and we've also written code that will determine which machine should turn on
         // in which situation.
     }
-    public static void switch() {
 
+    public static void switchStatement() {
+        // Often we'll deal with cases that can be represented through state.  For example,
+        // Many fans will allow you to adjust the speed of the fan blades.  In this case,
+        // the different settings are represented by fan speed 1, 2, and 3.
+        // The switch case allows us to represent that logic in order to make our code look
+        // cleaner and as a result, easier to read.
+        int fanSetting = 2;
+        switch (fanSetting) { // I specify what variable will act as my controller.
+            case 1: // In the case fanSetting == 1
+                System.out.println("It's a storm in here!  Fan setting at maximum.");
+                break;
+            case 2: // if fanSetting == 2
+                System.out.println("Fan set to a medium setting.");
+                break;
+            case 3: // if fanSetting == 3
+                System.out.println("Is there a breeze in here?  Fan setting at minimum.");
+                break;
+            default:
+                System.out.println("Are you sure that you have an appropriate setting?");
+                break;
+        }
+        // Here's something to think about.  Within these cases, we see this alien
+        // 'break'.  Play with the code and see what the break statement does in this
+        // context.  What happens if we forget to add a break in one of these cases?
     }
 }

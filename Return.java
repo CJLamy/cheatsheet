@@ -12,8 +12,8 @@ public class Return {
         // pass on to Person Y, who takes in the door and returns it installed onto the car.
         int myAnswer = add(15, 7);
         System.out.println(myAnswer);
-
     }
+
     public int add(int a, int b) {
         int answer = a + b;
         return answer;
